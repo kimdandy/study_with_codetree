@@ -10,7 +10,12 @@ int main() {
     int score;
     cin >> score;
 
-    string result = (score == 100) ? "pass" : "failure";
-    cout << result;
+    // 1. string 사용
+    /*string result = (score == 100) ? "pass" : "failure";
+    cout << result;*/
+
+    // 2. 바로 출력
+    cout << ((score == 100) ? "pass" : "failure");
+    
     return 0;
 }
