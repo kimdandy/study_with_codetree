@@ -8,7 +8,7 @@ int main() {
 
     int i = 1;
     while(i<=n){
-        if(i%3==0) cout << i << " ";
+        if(i%3==0) cout << i << " "; // 중괄호가 없으면 바로 다음 코드만 내부코드
         i ++;
     }
 
