@@ -16,6 +16,7 @@ int main() {
     int t1, t2, t3;
     cin >> c1 >> t1 >> c2 >> t2 >> c3 >> t3;
 
+    // 각 인원 진료소 배정
     if (c1 == 'Y'){
         if (t1 >=37) s1 = 'A'; // 문자열은 작은 따옴표
         else s1 = 'C';
@@ -43,12 +44,13 @@ int main() {
         else s3 = 'D'; 
     }
 
+    // 위급 상황 판별 ; A 2개 이상
     if(s1 == 'A'){
-        if(s2 == 'A' or s3 == 'A') cout << "E";
+        if(s2 == 'A' or s3 == 'A') cout << "E"; // A A - 또는 A - A
         else cout << "N";
     }
     else {
-        if (s2 == 'A' and s3 == 'A') cout << "E";
+        if (s2 == 'A' and s3 == 'A') cout << "E"; // - A A
         else cout << "N";
     }
 
