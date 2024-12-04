@@ -9,10 +9,11 @@ int main() {
     int a, b, i;
     cin >> a >> b;
 
-    while(a<=b){ // b를 넘기 전까지
-        cout << a << " ";
-        if(a%2==1) a *= 2;
-        else a+=3;
+    i=a;
+    while(i<=b){ // b를 넘기 전까지
+        cout << i << " ";
+        if(i%2==1) i *= 2;
+        else i+=3;
     }
     return 0;
 }
