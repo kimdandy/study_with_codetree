@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int age; // 1<=age<=100
     int sum=0, cnt=0;
-    while(3){
+    while(3){ // 1이 아니라 다른 숫자를 넣어도 무한루프 성립
         cin >> age;
         if(age/10 != 2) break;
         sum+=age;
