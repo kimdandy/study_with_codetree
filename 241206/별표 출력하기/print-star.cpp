@@ -33,7 +33,7 @@ int main() {
         for(int j=1;j<=i;j++) cout << "* ";
         cout << endl;
     }
-    for (int i=n-1;i>=1;i--){
+    for (int i=n-1;i>=1;i--){ // 시작점이 n이 아닌 n-1 임을 주의
         for(int j=i;j>=1;j--) cout << "* ";
         cout << endl;
     }
