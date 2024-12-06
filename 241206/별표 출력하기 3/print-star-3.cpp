@@ -25,8 +25,8 @@ int main() {
     cin >> n;
 
     for(int i=n;i>=1;i--){ // 역순 주의
-        for(int k=0;k<n-i;k++) cout << "  "; // 공백의 개수 : 행의 위치-1
-        for(int j=2*i-1;j>=1;j--) cout << "* "; // *의 개수 : 2*행의 위치 -1
+        for(int k=0;k<n-i;k++) cout << "  "; // 공백의 개수 : 행 번호-1
+        for(int j=2*i-1;j>=1;j--) cout << "* "; // *의 개수 : 2*행 번호 -1
         cout << endl;
     }
     return 0;
