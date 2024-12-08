@@ -19,7 +19,7 @@ int main() {
     cin >> n;
 
     for(int i=1;i<=n;i++){
-        for(int j=0;j<n;j++) cout << i*(4-j) << " ";
+        for(int j=0;j<n;j++) cout << i*(n-j) << " ";
         cout << endl;
     }
     return 0;
