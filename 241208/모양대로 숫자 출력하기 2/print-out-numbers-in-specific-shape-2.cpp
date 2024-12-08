@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+/* Q. 정수 n의 값을 입력받아 다음과 같이 n x n 크기의 숫자를 출력하는 프로그램을 아래 예를 참고하여 작성해보세요. 모든 숫자는 10 미만의 짝수로 이루어져 있습니다.
+
+예)
+n에 2를 입력받는 경우
+2 4
+6 8
+
+n에 3을 입력받는 경우
+2 4 6 
+8 2 4
+6 8 2
+*/
+int main() {
+    int n; // 1<=n<=15
+    cin >> n;
+
+    int cnt =0;
+    for(int i=1;i<=n;i++){
+        for(int j=1;j<=n;j++){
+            cnt++;
+            if(cnt>=5) cnt=1; // 2*cnt<10
+            cout << cnt*2 << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
