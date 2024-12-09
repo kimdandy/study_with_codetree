@@ -10,15 +10,15 @@ using namespace std;
 int main() {
     int n, z; // 1<=n<=100, z:입력받는 정수 할당을 위한 변수
     cin >> n;
-    int arr[100]; // n의 최댓값 100, 1<=cnt(z)<=n
-    int cnt =0;
+    int arr[100]; // arr: 입력받은 수중, 짝수 만을 저장할 배열, n의 최댓값 100, 1<=cnt(z)<=n
+    int sz =0; // sz : arr의 크기
     for(int i=0;i<n; i++){
         cin >> z; // 1<=z<=100
         if(z%2==0) {
-            arr[cnt]=z;
-            cnt ++;
+            arr[sz]=z;
+            sz ++;
         }
     }
-    for(int i=cnt-1;i>=0;i--) cout << arr[i] << " "; // 배열은 0부터 시작
+    for(int i=sz-1;i>=0;i--) cout << arr[i] << " "; // 배열은 0부터 시작
     return 0;
 }
