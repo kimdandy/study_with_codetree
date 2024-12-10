@@ -23,17 +23,21 @@ int main() {
     int a,b; // 10 ≤ a ≤ 1,000 , 2 ≤ b ≤ 10
     cin >> a >> b;
 
-    int lefts[10]={}; //  나머지의 개수의 배열, 배열의 경우 모든 원소값을 0으로 초기화
+    int lefts[10]={}; //  나머지의 개수의 배열, 배열의 경우 모든 원소값을 0으로 초기화 , b_max=10 
+     // 초기화 확인용
     while(a>1){
+         int left = a%b; // 나머지 ; a의 값이 변화하니 나머지 먼저 구하고 a 에 몫 저장
          a /= b;
-         int left = a%b; // 나머지
-         for(int i=0; i<10;i++) if(left==i) lefts[i]++;
+         for(int i=0; i<b;i++) if(i==left) lefts[i]++; // 0<=left<=b
+         //for(int i=0;i<b;i++) cout << lefts[i]; cout << endl; // 값할당 확인용
     }
 
     int sum=0; // 나머지 개수의 제곱의 합
-    for(int i=0; i<10; i++){
-        sum+=lefts[i]*lefts[i];
+    for(int i=0; i<b; i++){
+        int c=lefts[i]*lefts[i];
+        sum+=c;
     }
     cout << sum;
+    
     return 0;
 }
