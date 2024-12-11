@@ -13,15 +13,21 @@ int main() {
     int a[100], b[100]; // n1_max = n2_max = 100
     for(int idx1=0;idx1<n1;idx1++) cin >> a[idx1]; // 1~100
     for(int idx2=0;idx2<n2;idx2++) cin >> b[idx2]; // 1~100
+    //cout << n1 << " " << n2 << endl;
 
-    int cur=0, cnt=0;
-    for(int idx2=0; idx2<n2; idx2++)
-        for(int idx1=cur; idx1<n1; idx1++){
-            if(a[idx1]==b[idx2] && (      cur == 0      ||     a[idx1-1]==b[idx2-1]     ) ){ 
-            // 두 원소가 같을 때    시작위치가 지정되지 않았거나 이전 인덱스의 값들도 동일하다면 
-                cur=idx1;
-                cnt++;
-            }      
+    int cur2=0, cnt=0; // 2번 비교 위치 , 일치 스택
+    for(int idx1=0; idx1<n1; idx1++)
+        for(int idx2=cur2;idx2<n2;idx2++){
+           if(  a[idx1]==b[idx2]    && (    cnt ==0    || a[idx1-1]==b[idx2-1]) ) {
+        //    일치하는 원소를 찾았을 때 일치 스택이 0이거나 각 이전 위치의 원소값도 같다면
+            cur2 = idx2+1; // 비교 위치 다음 원소로 이동
+            cnt++; // 일치 스택 1 증가
+            break; // 루프 종료하고 각자 다음 원소 값이 같은 지 확인
+           }
+           else { // 다르다면
+            cur2=0; 
+            cnt = 0; // 비교 위치와 일치스택 전부 초기화
+           }
         }
     if(cnt == n2) cout << "Yes";
     else cout << "No";
