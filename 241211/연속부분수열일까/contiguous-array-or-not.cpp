@@ -17,7 +17,7 @@ int main() {
 
     int cur2 = 0; // 2번 비교 위치(0~n2) , 첫원소(b[0]) 부터 비교
     bool isright = false; // 포함 여부
-    for(int idx1=0; idx1<n1; idx1++){ 
+    for(int idx1=0; idx1<n1; idx1++){ // a 배열의 순서대로
         if(a[idx1]==b[cur2] && (cur2==0 || a[idx1-1]==b[cur2-1]) ) cur2++;
         // 두 원소값이 일치할 때 비교위치가 0이거나 이전 위치의 두 원소도 일치한다면 다음 원소도 비교(비교위치 1 증가)
         else cur2=0; // 다르다면 비교위치 초기화
