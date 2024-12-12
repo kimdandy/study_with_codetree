@@ -6,7 +6,7 @@ int main() {
     int n; // 2 ≤ N ≤ 100
     cin >> n;
     int arr[100]; // n_max=100
-    int max=-2147483647, max2=-2147483647;
+    int max=-2147483648, max2=max; // arr[i]_min = -2^31
     for(int i=0;i<n;i++){
         cin >> arr[i]; // -2^31~2^31 -1
         if(arr[i]>max2) {
