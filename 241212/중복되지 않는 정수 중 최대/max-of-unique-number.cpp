@@ -6,12 +6,26 @@ int main() {
     int n; // 1 ≤ N ≤ 1,000
     cin >> n;
     int arr[1000]; // N_max=1000
-    int max = -1; // default : -1
-    for(int i=0;i<n;i++){
+    int dup[1000]={}; // 중복 인 위치에 1을 배치하는 배열
+
+    
+    for(int i=0;i<n;i++) {
         cin >> arr[i]; // 1~1000
-        if(arr[i]==max) max = -1;
+
+        for(int j=0; j<i;j++) { // 중복체크를 위해 이전 원소들과 값 비교
+            if(arr[j]== arr[i]) { // 중복이 확인된다면
+                dup[i]=1;
+                dup[j]=1; // 두 위치 모두에 1 배치
+                break;
+            }
+        }
+    }
+    int max = -1; // default : -1
+    for(int i=0;i<n;i++) {
+        if(dup[i]==1) continue; // 중복수라면 통과
         else if(arr[i]>max) max=arr[i];
     }
+
     cout << max;
     return 0;
 }
