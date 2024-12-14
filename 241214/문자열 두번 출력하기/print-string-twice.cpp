@@ -29,7 +29,7 @@ cout << str[2];  // n < -문자열의 세 번째 문자
 #include <string> // 문자열 함수 string을 호출하기 위해 필요한 헤더
 
 int main() {
-    string str; // 문자열의 크기는 일단 신경쓰지 않는다
+    string str; // c++에서 문자열의 크기는 일단 신경쓰지 않는다
     cin >> str;
     for(int i=0;i<2;i++) cout << str << endl;
     return 0;
