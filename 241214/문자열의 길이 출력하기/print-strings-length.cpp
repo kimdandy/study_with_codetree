@@ -13,3 +13,10 @@ int main() {
     cout << str1.length() + str2.length();
     return 0;
 }
+
+// strlen() : char 계통 문자열 의 길이를 반환
+// strlen("문자열")
+// strlen 에서 \0를 만나면 \0전까지만 계산해서 반환
+// strlen("Hello\0World") = 5
+// \n 은 1글자로 인식
+
