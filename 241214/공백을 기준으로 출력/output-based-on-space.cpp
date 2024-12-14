@@ -8,8 +8,6 @@ int main() {
     getline(cin, str1);
     getline(cin, str2);
     
-    /*string strs[2][100] = {str1, str2};
-    for(int k=0; k<2;k++)*/
     for(int i=0;i<str1.length();i++){ // 정확히 문자열의 크기만큼 할당할 것
             if( str1[i] != ' ') cout << str1[i];
             }
