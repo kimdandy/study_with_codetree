@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     string str[10];
     for(int i=0;i<10;i++){
-        cin >> str[i]; // strlen ≤ 200
+        cin >> str[i]; // strlen_sum ≤ 200
         cout << str[i] << endl;
     }
     return 0;
