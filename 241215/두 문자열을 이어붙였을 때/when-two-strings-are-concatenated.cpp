@@ -10,8 +10,11 @@ int main() {
     string b; // 1 ≤ 문자열 B의 길이 ≤ 100
     cin >> b;
 
-    string ab = a + b;
-    string ba = b + a;
+    string ab = a;
+    ab.append(b);
+
+    string ba =b;
+    ba.append(a);
 
     if(ab == ba) cout << "true";
     else cout << "false";
