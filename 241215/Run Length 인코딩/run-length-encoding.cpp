@@ -19,10 +19,6 @@ int main() {
     for(int i=1;i<alen;i++){ // 첫문자는 통과
         if(a[i] == a[i-1]){
             cnt++; // 이전과 문자가 같다면 중복수 증가
-            if(i==alen-1){ // 마지막 순번 포함
-                rle[cn] = a[i]; 
-                rle_len[cn] = cnt; 
-            } // 마지막 순번의 정보를 각 배열에 저장
         }
         else{ // 다르다면 이전 까지의 정보를 각 배열에 저장 후 초기화
             rle[cn] = a[i-1];
@@ -30,6 +26,11 @@ int main() {
             cnt=1;
             cn++;
         }
+
+        if(i==alen-1){ // 마지막 순번 포함
+                rle[cn] = a[i]; 
+                rle_len[cn] = cnt; 
+            } // 마지막 순번의 정보를 각 배열에 저장
     }
     
     int rle_len_sum = 0;
