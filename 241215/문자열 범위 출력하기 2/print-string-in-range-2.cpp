@@ -10,9 +10,10 @@ int main() {
     int n; // 1 ≤ 정수 값 ≤ 100
     cin >> n;
 
-    for(int i=str.length()-1; i>str.length()-1-n; i--){ // 1~n == 0 ~ n-1
-        if(str[i] == '\0') break;
+    int strl = str.length();
+    if(strl<n) n=strl; // n이 문자열의 크기를 초과한다면 n을 문자열크기에 맞춤
+    for(int i=strl-1; i>strl-1-n; i--) // 1~n == 0 ~ n-1
         cout << str[i];
-    }
+    
     return 0;
 }
