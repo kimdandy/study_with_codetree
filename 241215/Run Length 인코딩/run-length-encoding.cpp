@@ -16,22 +16,19 @@ int main() {
     string rle[alen]; // 중복 문자 저장 배열
     int rle_len[alen]={}; // 중복문자 수 저장 배열
     int cnt = 1 , cn=0; // cnt:중복수 , cn:문자의 기수
-    for(int i=1;i<alen;i++){ // 첫문자는 통과
-        if(a[i] == a[i-1]){
-            cnt++; // 이전과 문자가 같다면 중복수 증가
-        }
+    for(int i=0;i<alen;i++){ 
+        if(i==0) continue; // 첫문자는 통과
+        
+        if(a[i] == a[i-1]) cnt++; // 이전과 문자가 같다면 중복수 증가
         else{ // 다르다면 이전 까지의 정보를 각 배열에 저장 후 초기화
             rle[cn] = a[i-1];
             rle_len[cn] = cnt; 
             cnt=1;
             cn++;
         }
-
-        if(i==alen-1){ // 마지막 순번 포함
-                rle[cn] = a[i]; 
-                rle_len[cn] = cnt; 
-            } // 마지막 순번의 정보를 각 배열에 저장
-    }
+    } // 마지막 순번 처리
+    rle[cn] = a[alen-1]; 
+    rle_len[cn] = cnt; // 마지막 순번의 정보를 각 배열에 저장
     
     int rle_len_sum = 0;
     for(int i=0;i<=cn;i++) {// 마지막 순번 포함
