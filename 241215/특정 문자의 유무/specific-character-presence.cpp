@@ -30,26 +30,26 @@ string s = "appleabanana";
 int main() {
     string str; // strlen : ~20
     cin >> str;
-
-    bool ee_exist = false;
-    for(int i=0; i<str.length()-2;i++)
-        if(str[i]=='e' && str[i+1]=='e'){
-            ee_exist = true;
-            break;
-        }
-    if(ee_exist == true) cout << "Yes";
-    else cout << "No";
     
-    cout << " ";
-
-    bool ab_exist = false;
-    for(int i=0; i<str.length()-2;i++)
-        if(str[i]=='a' && str[i+1]=='b'){
-            ab_exist = true;
+    string st[2] = {"ee",  "ab"};
+    for(int k=0;k<2;k++){
+        if(str.length()<2){ // 글자 수가 하나일 경우
+            cout << "No" << " " <<"No";
             break;
         }
-    if(ab_exist == true) cout << "Yes";
-    else cout << "No";
+
+        bool isexist = false;
+        for(int i=0; i<str.length()-2;i++)
+            if(str[i]==st[k][0] && str[i+1]==st[k][1]){
+                isexist = true;
+                break;
+            }
+        if(isexist == true) cout << "Yes";
+        else cout << "No";
+
+        cout << " ";
+    }
+
 
     return 0;
 }
