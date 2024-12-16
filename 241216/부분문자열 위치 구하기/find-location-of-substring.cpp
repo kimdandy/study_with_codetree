@@ -14,8 +14,9 @@ int main() {
     */
     // fing 미사용 및 substr 사용
     bool isexist = false;
-    for(int i=0; i<ipt.length() -1 ; i++){
-        if(ipt.substr(i, fnd.length()) == fnd){
+    int n = ipt.length(), m=fnd.length(); 
+    for(int i=0; i< n - (m-1) ; i++){
+        if(ipt.substr(i, m) == fnd){
             cout << i;
             isexist = true;
             break;
