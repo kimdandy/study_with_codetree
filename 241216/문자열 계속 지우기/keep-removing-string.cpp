@@ -16,7 +16,7 @@ int main() {
     string a, b; // 1 ≤ 문자열 A의 길이, 문자열 B의 길이 ≤ 100
     cin >> a >> b;
     
-    while(1){
+    for(;;){
         bool issubstr = false;
         for(int i=0; i< a.length() - (b.length()-1); i++){
             if(a.substr(i, b.length()) == b){
