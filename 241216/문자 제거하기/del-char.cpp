@@ -11,8 +11,8 @@ int main() {
     int pos;
     while(str.length()>1){
         cin >> pos;
-        if(pos > str.length()) str.erase(str.length()-1);
-        else str.erase(pos, 1);
+        if(pos > str.length()-1) str.erase(str.length()-1); // str의 마지막 순번은 str.length -1
+        else str.erase(pos , 1);
         cout << str << endl;
     }
     return 0;
