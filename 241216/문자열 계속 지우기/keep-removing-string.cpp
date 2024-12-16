@@ -21,16 +21,14 @@ int main() {
         for(int i=0; i< a.length() - (b.length()-1); i++){
             if(a.substr(i, b.length()) == b){
                  a=a.substr(0, i) + a.substr(i+b.length());
-                 // 0부터 i번쨰 전까지 원소의 개수는 i개
+                 // 0부터 i번째 전까지 원소의 개수는 i개
                  // i부터 b의 길이 만큼의 원소를 빼고 나면 뒤에 남는 원소의 개수는 i+b의 길이 부터의 원소의 개수와 같음
                  /*  i=3 에서 문자열을 뺀다 하면(b=2)
                     111 11 1 111
                     111 00 1 111
                     0   i i+b
                     0~2 3  i+b~/0
-                    3개 b=2 9-5=4개
-                 */
-
+                    3개 b=2 9-5=4개*/
                  //cout << i << " " << a << endl; // 확인용
                  issubstr = true;
             }
