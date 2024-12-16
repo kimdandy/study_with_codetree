@@ -15,7 +15,7 @@ int main() {
     // fing 미사용 및 substr 사용
     bool isexist = false;
     int n = ipt.length(), m=fnd.length(); 
-    for(int i=0; i< n - (m-1) ; i++){
+    for(int i=0; i< n - (m-1) ; i++){ // 탐색 범위 : 입력문자열 크기 - (목적 문자열 크기 -1)
         if(ipt.substr(i, m) == fnd){
             cout << i;
             isexist = true;
