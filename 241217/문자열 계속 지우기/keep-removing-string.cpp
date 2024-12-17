@@ -20,7 +20,10 @@ int main() {
         while(1){
             bool issubstr = false;
             for(int i=0; i< a.length() - (b.length()-1); i++){
+
                 if(a == b) break;
+                ///// a의 값이 사라지면 런타임 에러가 발생하여 a와 b가 같아진다면 루프 종료하고 출력하지 않음
+                
                 if(a.substr(i, b.length()) == b){
                     a=a.substr(0, i) + a.substr(i+b.length());
                     // 0부터 i번째 전까지 원소의 개수는 i개
@@ -39,7 +42,7 @@ int main() {
             if(issubstr == false) break;
         }
     }
-    if( a != b)  cout << a;
+    if( a != b)  cout << a; 
 
     return 0; 
 }
