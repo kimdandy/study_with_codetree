@@ -30,6 +30,16 @@ int main() {
             string str2=str; // str과 같은 크기의 배열을 만들기위해 복사
             for(int i=0; i<n;i++) str2[i] = str[n-1-i]; // 복사한 배열에 뒤집은 값 저장 후
             str = str2; // 원본에 다시 복사
+        
+            /*// 해설본
+            // 문자열의 앞부터 순회하며 좌우 대칭 위치에 있는 문자와 swap해줍니다. 
+            // 단, 문자열의 절반만 순회해줍니다.
+            char temp;
+            for(int i = 0; i < str_size / 2; i++) {
+                temp = input_str[i];
+                input_str[i] = input_str[str_size - i - 1];
+                input_str[str_size - i - 1] = temp;
+            }*/    
         }
         cout << str << endl;
     }
