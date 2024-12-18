@@ -10,7 +10,9 @@ int main() {
 
     int sum = 0;
     for(int i=0;i<a.length();i++)
-        if(isdigit(a[i])) sum+=a[i];
+        if(isdigit(a[i])) sum+=(int)(a[i] - '0');
+        // 문자열 속 숫자는 아스키 코드로 치환가능한 문자 이므로 
+        // 아스키 코드에서 0에 해당하는 아스키코드를 빼면 문자에 해당하는 숫자값을 얻을 수 있다.
     cout << sum;
     return 0;
 }
