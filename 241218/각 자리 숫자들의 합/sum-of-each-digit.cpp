@@ -11,6 +11,7 @@ int main() {
 
     int sum=0;
     for(int i=0;i<sn.length();i++) sum+= (int)(sn[i] - '0');
+                                // sum+= stoi(sn[i]) // -> 런타임 에러 발생 
 
     cout << sum;
     
